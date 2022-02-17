@@ -38,7 +38,7 @@ int foo2(int a){
         }
     }
     if(return0()==10){
-        print("rt0");
+        return 1;
     }
     else if(return1()==-8){
         return 1;
