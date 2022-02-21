@@ -37,12 +37,6 @@ int foo2(int a){
             return 0;
         }
     }
-    if(return0()==10){
-        return 1;
-    }
-    else if(return1()==-8){
-        return 1;
-    }
 
 }
 
@@ -52,5 +46,20 @@ int foo3(int a){
         return a;
     } else {
         return 0;
+    }
+}
+String foostr(int a){
+    int tmp = return0();
+    int tmp = return0(), tmp2 = return0()*2, tmp3 = return0()-6+return1();
+    tmp = return1();
+    tmp = return0() + return1();
+    if(tmp == -1){
+        return "Hello";
+    } else {
+        if(return0() == -2){
+            return "a+1";
+        } else {
+            return "0";
+        }
     }
 }
