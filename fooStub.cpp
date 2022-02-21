@@ -48,7 +48,7 @@ int foo3(int a){
         return 0;
     }
 }
-String foostr(int a){
+string foostr(int a){
     int tmp = return0();
     int tmp = return0(), tmp2 = return0()*2, tmp3 = return0()-6+return1();
     tmp = return1();
