@@ -48,18 +48,3 @@ int foo3(int a){
         return 0;
     }
 }
-string foostr(int a){
-    int tmp = return0();
-    int tmp = return0(), tmp2 = return0()*2, tmp3 = return0()-6+return1();
-    tmp = return1();
-    tmp = return0() + return1();
-    if(tmp == -1){
-        return "Hello";
-    } else {
-        if(return0() == -2){
-            return "a+1";
-        } else {
-            return "0";
-        }
-    }
-}

@@ -16,9 +16,11 @@ class A {
             this -> b = b; // class A while <var> is a formal parameter
         }
         int ret5() {
+            cout << "call A ret5";
             return 5;
         }
         int ret6() {
+            cout << "call A ret6";
             return 6;
         }
 };
@@ -35,15 +37,18 @@ class B {
             this -> objA = aa;
         }
         int ret5() {
+            cout << "call B ret5";
             return 5;
         }
         static int ret6() {
-            cout << a << endl; // Acceptable
+            cout << a << endl;
+            cout<<"call B ret6"; // Acceptable
             return 6;
             //   cout << b; // Error!
         }
 
         A retA(){
+            cout<<"call B retA"
             return this->objA;
         }
 };
@@ -59,9 +64,9 @@ int uutFunc(int a, int b) {
     }
 
     if (obj.ret6()) {
-        cout << 2 << endl;
+        cout << "cout 2" << endl;
     } else {
-        cout << -2 << endl;
+        cout << "cout -2" << endl;
     }
     return 0;
     //   obj.fun1(); // Allowed
