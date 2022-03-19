@@ -19,7 +19,11 @@ SOURCES += \
         externalstub.cpp \
         fooStub.cpp \
         main.cpp \
-        stubFunc.cpp
+        stubFunc.cpp \
+        classoverloadfunction.cpp \
+        classprivateStub.cpp \
+        
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
