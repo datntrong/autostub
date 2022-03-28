@@ -55,7 +55,7 @@ class B {
 };
 
 int B::a = 0; // Initialization of static variable 'a'
-int uutFunc(int a, int b) {
+int uutFunc_multiparameter(int a, int b) {
     A objA(a, b);
     B obj(a, b, objA);
     if (obj.ret5()) {
@@ -87,7 +87,26 @@ int uutFunc(int a, int b) {
     //   A::fun1(); // Error!
     //   A::fun2(); // Allowed
 }
+int uutFunc(int a, int b) {
+    A objA(a, b);
+    B obj(a, b, objA);
+    if (obj.ret5()) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
 
+    if (obj.ret6()) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+    //   obj.fun1(); // Allowed
+    //   obj.fun2(); // Allowed
+    //   A::fun1(); // Error!
+    //   A::fun2(); // Allowed
+}
 int multipleReference(int a, int b) {
     A objA(a, b);
     B obj(a, b, objA);
