@@ -40,7 +40,7 @@ class B_overload {
 
 
 
-int uutFunc(int a, double b) {
+int uutFuncoverload(int a, double b) {
     A_overload objA;
     if (objA.foo(a)) {
         cout << 1 << endl;
@@ -61,7 +61,7 @@ int uutFunc(int a, double b) {
 }
 
 
-int multipleReference(int a, double b) {
+int multipleReferenceoverload(int a, double b) {
     A_overload objA;
     B_overload obj(objA);
     if (obj.foo(a) == 2) {

@@ -37,7 +37,7 @@ class A_private{
 
 
 
-int uutFunc(int a, double b) {
+int uutFuncclassprv(int a, double b) {
     A_private objA;
     if (objA.length(a,b)) {
         cout << 1 << endl;
@@ -57,6 +57,3 @@ int uutFunc(int a, double b) {
     //   A::fun2(); // Allowed
 }
 
-int main(){
-    int a = uutFunc(3,4);
-}
