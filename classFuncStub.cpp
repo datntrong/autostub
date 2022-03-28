@@ -42,6 +42,12 @@ class B {
             return 6;
             //   cout << b; // Error!
         }
+         int ret7(int a){
+            return 7;
+        }
+        int ret8(int a, double b){
+            return 8;
+        }
 
         A retA(){
             return this->objA;
@@ -62,6 +68,18 @@ int uutFunc(int a, int b) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
+    }
+    int temp_a = 5;
+    double temp_b = 5.00;
+    if (obj.ret7(temp_a)) {
+        cout << "call ret7    2" << endl;
+    } else {
+        cout << "call ret7    2" << endl;
+    }
+    if (obj.ret8(temp_a,temp_b)) {
+        cout << "call ret8    2" << endl;
+    } else {
+        cout << "call ret8    -2" << endl;
     }
     return 0;
     //   obj.fun1(); // Allowed
