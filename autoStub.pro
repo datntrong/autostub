@@ -22,6 +22,7 @@ SOURCES += \
         stubFunc.cpp \
         classoverloadfunction.cpp \
         classprivateStub.cpp \
+        fooStubstatic.cpp \
         
 
 
