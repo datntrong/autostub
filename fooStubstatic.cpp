@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void sayHello(){
+void sayHello1(){
     cout << "Hello" << endl;
 }
 
@@ -24,7 +24,7 @@ int foo1_static(int a){
 }
 
 int foo2_static(int a){
-    sayHello();
+    sayHello1();
     int tmp = return0(), tmp2 = return0()*2, tmp3 = return0()-6+return1();
     tmp = return1();
     tmp = return0() + return1();
