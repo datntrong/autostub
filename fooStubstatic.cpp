@@ -29,8 +29,10 @@ int foo2_static(int a){
     tmp = return1();
     tmp = return0() + return1();
     if(tmp == -1){
+        cout<< "if true";
         return a;
     } else {
+        cout<< "if false";
         if(return0() == -2){
             return a + 1;
         } else {
