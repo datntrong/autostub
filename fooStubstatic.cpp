@@ -33,7 +33,7 @@ int foo2_static(int a){
         return a;
     } else {
         cout<< "if false";
-        if(return0() == -2){
+        if(return0_static() == -2){
             return a + 1;
         } else {
             return 0;
