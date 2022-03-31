@@ -1,21 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void sayHello(){
+void sayHello1(){
     cout << "Hello" << endl;
 }
 
-static int return0(){
+static int return0_static(){
     return 0;
 }
 
-static int return1(){
+static int return1_static(){
     return 1;
 }
 
 int foo1_static(int a){
     int b[2] = {a, a + 1};
-    int tmp = return0();
+    int tmp = return0_static();
     if(tmp == -1){
         return a;
     } else {
@@ -24,10 +24,10 @@ int foo1_static(int a){
 }
 
 int foo2_static(int a){
-    sayHello();
-    int tmp = return0(), tmp2 = return0()*2, tmp3 = return0()-6+return1();
-    tmp = return1();
-    tmp = return0() + return1();
+    sayHello1();
+    int tmp = return0_static(), tmp2 = return0_static()*2, tmp3 = return0_static()-6+return1_static();
+    tmp = return1_static();
+    tmp = return0_static() + return1_static();
     if(tmp == -1){
         cout<< "if true";
         return a;
