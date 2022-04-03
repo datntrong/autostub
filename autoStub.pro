@@ -23,6 +23,7 @@ SOURCES += \
         classoverloadfunction.cpp \
         classprivateStub.cpp \
         fooStubstatic.cpp \
+        classvirtualfunc.cpp \
         
 
 
