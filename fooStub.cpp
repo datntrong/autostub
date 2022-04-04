@@ -23,6 +23,14 @@ int foo1(int a){
     }
 }
 
+int return0_para(int a){
+    return 0;
+}
+
+int return1_para(int ){
+    return 1;
+}
+
 int foo2(int a){
     sayHello();
     int tmp = return0(), tmp2 = return0()*2, tmp3 = return0()-6+return1();
@@ -32,6 +40,24 @@ int foo2(int a){
         return a;
     } else {
         if(return0() == -2){
+            return a + 1;
+        } else {
+            return 0;
+        }
+    }
+
+}
+
+
+int foo2_para(int a){
+    sayHello();
+    int tmp = return0_para(a), tmp2 = return0_para(a)*2, tmp3 = return0_para(a)-6+return1();
+    tmp = return1_para(a);
+    tmp = return0_para(a) + return1();
+    if(tmp == -1){
+        return a;
+    } else {
+        if(return0_para(a) == -2){
             return a + 1;
         } else {
             return 0;
