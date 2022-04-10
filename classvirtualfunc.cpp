@@ -11,6 +11,10 @@ public:
         cout<<"I am A_ret1_virtual"<<endl;
         return 1;
     }
+    virtual int ret5_virtual(){
+        cout<<"I am A_ret1_virtual"<<endl;
+        return 5;
+    }
 };
 
 class B_virtual:A_virtual{
@@ -34,6 +38,27 @@ int uutFuncvirtual(int a, double b) {
     }
 
     if (objA.ret1_virtual()) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+    //   obj.fun1(); // Allowed
+    //   obj.fun2(); // Allowed
+    //   A::fun1(); // Error!
+    //   A::fun2(); // Allowed
+}
+
+int uutFuncvirtual_nonpara(int a, double b) {
+    A_virtual objA;
+
+    if (objA.ret1_virtual()) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+
+    if (objA.ret5_virtual()==6) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
