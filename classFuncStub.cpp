@@ -35,11 +35,11 @@ class B {
             this -> objA = aa;
         }
         int ret5() {
-            return 5;
+            return 0;
         }
         static int ret6() {
             cout << a << endl; // Acceptable
-            return 6;
+            return 0;
             //   cout << b; // Error!
         }
          int ret7(int a){
