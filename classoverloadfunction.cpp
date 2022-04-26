@@ -72,13 +72,13 @@ int uutFuncoverload(int a, double b) {
 
 int uutFuncoverload(string a, char b) {
     A_overload objA;
-    if (objA.foo_1(a)) {
+    if (objA.foo_1(a) == 1) {
         cout << 1 << endl;
     } else {
         cout << -1 << endl;
     }
 
-    if (objA.foo_1(b)) {
+    if (objA.foo_1(b) == 2) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
