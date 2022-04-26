@@ -14,10 +14,6 @@ public:
         cout<<"I am A_foo-double"<<endl;
         return 0;
     }
-    int foo(long a){
-        cout<<"I am A_foo_long"<<endl;
-        return 0;
-    }
     int foo_1(string a){
         cout<<"I am A_foo_1_string"<<endl;
         return 0;    
@@ -26,6 +22,18 @@ public:
         cout<<"I am A_foo_1_char"<<endl;
         return 0;    
     }
+    int foo_2(B_overload a){
+        cout<<"I am A_foo_2_B_overload"<<endl;
+        return 0;  
+    }
+    int foo_2(list b){
+        cout<<"I am A_foo_2_B_overload"<<endl;
+        return 0;  
+    }
+};
+
+enum list {
+    one, two, three
 };
 
 class B_overload {
@@ -79,6 +87,26 @@ int uutFuncoverload(string a, char b) {
     }
 
     if (objA.foo_1(b) == 2) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+    //   obj.fun1(); // Allowed
+    //   obj.fun2(); // Allowed
+    //   A::fun1(); // Error!
+    //   A::fun2(); // Allowed
+}
+
+int uutFuncoverload(B_overload a, list b) {
+    A_overload objA;
+    if (objA.foo_2(a) == 1) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
+
+    if (objA.foo_2(b) == 2) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
