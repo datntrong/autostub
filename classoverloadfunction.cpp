@@ -52,13 +52,13 @@ class B_overload {
 
 int uutFuncoverload(int a, double b) {
     A_overload objA;
-    if (objA.foo(a)) {
+    if (objA.foo(a) == 1) {
         cout << 1 << endl;
     } else {
         cout << -1 << endl;
     }
 
-    if (objA.foo(b)) {
+    if (objA.foo(b) == 2) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
