@@ -27,7 +27,7 @@ public:
         return 0;  
     }
     int foo_2(list b){
-        cout<<"I am A_foo_2_B_overload"<<endl;
+        cout<<"I am A_foo_2_list"<<endl;
         return 0;  
     }
 };
