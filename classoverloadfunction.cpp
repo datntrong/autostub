@@ -70,6 +70,26 @@ int uutFuncoverload(int a, double b) {
     //   A::fun2(); // Allowed
 }
 
+int uutFuncoverload(string a, char b) {
+    A_overload objA;
+    if (objA.foo_1(a)) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
+
+    if (objA.foo_1(b)) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+    //   obj.fun1(); // Allowed
+    //   obj.fun2(); // Allowed
+    //   A::fun1(); // Error!
+    //   A::fun2(); // Allowed
+}
+
 
 int multipleReferenceoverload(int a, double b) {
     A_overload objA;
