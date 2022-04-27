@@ -1,11 +1,16 @@
 #include<iostream>
 using namespace std;
+
+enum enum_var {
+    one, two, three
+};
 class A_overload{
 public:
     int i;
     A_overload(){
         this -> i = 2;
     }
+    
     int foo(int a){
         cout<<"I am A_foo_int"<<endl;
         return 0;
@@ -14,6 +19,7 @@ public:
         cout<<"I am A_foo-double"<<endl;
         return 0;
     }
+
     int foo_1(string a){
         cout<<"I am A_foo_1_string"<<endl;
         return 0;    
@@ -22,18 +28,24 @@ public:
         cout<<"I am A_foo_1_char"<<endl;
         return 0;    
     }
+
     int foo_2(B_overload a){
         cout<<"I am A_foo_2_B_overload"<<endl;
         return 0;  
     }
-    int foo_2(list b){
+    int foo_2(enum_var b){
         cout<<"I am A_foo_2_list"<<endl;
         return 0;  
     }
-};
 
-enum list {
-    one, two, three
+    int foo_3(int *a){
+        cout<<"I am A_foo_3_pointer"<<endl;
+        return 0;  
+    }
+    int foo_3(int arr[]){
+        cout<<"I am A_foo_3_array"<<endl;
+        return 0;  
+    }
 };
 
 class B_overload {
@@ -51,7 +63,6 @@ class B_overload {
             cout<<"I am B_foo-double"<<endl;
             return 0;
         }
-
 
         A_overload retA(){
             return this->objA;
