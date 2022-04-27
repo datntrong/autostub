@@ -10,7 +10,7 @@ public:
     A_overload(){
         this -> i = 2;
     }
-    
+
     int foo(int a){
         cout<<"I am A_foo_int"<<endl;
         return 0;
@@ -129,6 +129,25 @@ int uutFuncoverload(B_overload a, list b) {
     //   A::fun2(); // Allowed
 }
 
+int uutFuncoverload(int *a, int b[]) {
+    A_overload objA;
+    if (objA.foo_3(a) == 1) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
+
+    if (objA.foo_3(b) == 2) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+    //   obj.fun1(); // Allowed
+    //   obj.fun2(); // Allowed
+    //   A::fun1(); // Error!
+    //   A::fun2(); // Allowed
+}
 
 int multipleReferenceoverload(int a, double b) {
     A_overload objA;
