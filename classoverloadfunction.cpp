@@ -1,13 +1,14 @@
 #include<iostream>
 using namespace std;
 
-// enum enum_var {
-//     one, two, three
-// };
+enum enum_var {
+    one, two, three
+};
 
-// class C_overload {
-//     int a;
-// };
+class C_overload {
+    public:
+        int a;
+};
 
 class A_overload{
 public:
@@ -34,14 +35,14 @@ public:
         return 0;    
     }
 
-    // int foo_2(C_overload a){
-    //     cout<<"I am A_foo_2_B_overload"<<endl;
-    //     return 0;  
-    // }
-    // int foo_2(enum_var b){
-    //     cout<<"I am A_foo_2_enum"<<endl;
-    //     return 0;  
-    // }
+    int foo_2(C_overload a){
+        cout<<"I am A_foo_2_B_overload"<<endl;
+        return 0;  
+    }
+    int foo_2(enum_var b){
+        cout<<"I am A_foo_2_enum"<<endl;
+        return 0;  
+    }
 
     // int foo_3(long a){
     //     cout<<"I am A_foo_3_pointer"<<endl;
@@ -114,25 +115,21 @@ int uutFuncoverload(string a, char b) {
     //   A::fun2(); // Allowed
 }
 
-// int uutFuncoverload(C_overload a, enum_var b) {
-//     A_overload objA;
-//     if (objA.foo_2(a) == 1) {
-//         cout << 1 << endl;
-//     } else {
-//         cout << -1 << endl;
-//     }
+int uutFuncoverload(C_overload a, enum_var b) {
+    A_overload objA;
+    if (objA.foo_2(a) == 1) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
 
-//     if (objA.foo_2(b) == 2) {
-//         cout << 2 << endl;
-//     } else {
-//         cout << -2 << endl;
-//     }
-//     return 0;
-//     //   obj.fun1(); // Allowed
-//     //   obj.fun2(); // Allowed
-//     //   A::fun1(); // Error!
-//     //   A::fun2(); // Allowed
-// }
+    if (objA.foo_2(b) == 2) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+}
 
 // int uutFuncoverload(long a, int *b) {
 //     A_overload objA;

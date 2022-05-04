@@ -17437,7 +17437,16 @@ namespace std
 }
 # 2 "D:\\Nam_hai\\Semester_2\\CNPM\\NCKH\\autostub\\autostub\\classoverloadfunction.cpp" 2
 using namespace std;
-# 12 "D:\\Nam_hai\\Semester_2\\CNPM\\NCKH\\autostub\\autostub\\classoverloadfunction.cpp"
+
+enum enum_var {
+    one, two, three
+};
+
+class C_overload {
+    public:
+        int a;
+};
+
 class A_overload{
 public:
     int i;
@@ -17462,7 +17471,16 @@ public:
         cout<<"I am A_foo_1_char"<<endl;
         return 0;
     }
-# 54 "D:\\Nam_hai\\Semester_2\\CNPM\\NCKH\\autostub\\autostub\\classoverloadfunction.cpp"
+
+    int foo_2(C_overload a){
+        cout<<"I am A_foo_2_B_overload"<<endl;
+        return 0;
+    }
+    int foo_2(enum_var b){
+        cout<<"I am A_foo_2_enum"<<endl;
+        return 0;
+    }
+# 55 "D:\\Nam_hai\\Semester_2\\CNPM\\NCKH\\autostub\\autostub\\classoverloadfunction.cpp"
 };
 
 class B_overload {
@@ -17525,7 +17543,23 @@ int uutFuncoverload(string a, char b) {
 
 
 }
-# 157 "D:\\Nam_hai\\Semester_2\\CNPM\\NCKH\\autostub\\autostub\\classoverloadfunction.cpp"
+
+int uutFuncoverload(C_overload a, enum_var b) {
+    A_overload objA;
+    if (objA.foo_2(a) == 1) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
+
+    if (objA.foo_2(b) == 2) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+}
+# 154 "D:\\Nam_hai\\Semester_2\\CNPM\\NCKH\\autostub\\autostub\\classoverloadfunction.cpp"
 int multipleReferenceoverload(int a, double b) {
     A_overload objA;
     B_overload obj(objA);
