@@ -191,7 +191,7 @@ int multilevelInheritance(int *a, int b)
         cout << -2 << endl;
     }
 
-    if (objC.ret2_virtual() == 2)
+    if (objC.ret2_virtual(b) == 2)
     {
         cout << 3 << endl;
     }
@@ -223,7 +223,7 @@ int multipleInheritance(int *a, int b)
         cout << -2 << endl;
     }
 
-    if (objD.ret2_virtual() == 1)
+    if (objD.ret2_virtual(b) == 1)
     {
         cout << 3 << endl;
     }
