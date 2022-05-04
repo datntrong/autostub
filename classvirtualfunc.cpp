@@ -60,7 +60,7 @@ public:
         cout << "I am A_ret2_virtual" << endl;
         return 2;
     }
-}
+};
 
 class D_virtual : C_virtual, A_virtual
 {
@@ -80,7 +80,7 @@ public:
         cout << "I am A_ret2_virtual" << endl;
         return 1;
     }
-}
+};
 
 int uutFuncvirtual(int a, double b)
 {
