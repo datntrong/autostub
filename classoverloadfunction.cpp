@@ -5,13 +5,13 @@ using namespace std;
 //     one, two, three
 // };
 
-// class C_overload {
-//     public:
-//         int i;
-//         C_overload(){
-//         this -> i = 2;
-//     }
-// };
+class C_overload {
+    public:
+        int i;
+        C_overload(){
+        this -> i = 2;
+    }
+};
 
 class A_overload{
 public:
@@ -38,20 +38,20 @@ public:
         return 0;    
     }
 
-    // int foo_2(C_overload a){
-    //     cout<<"I am A_foo_2_B_overload"<<endl;
-    //     return 0;  
-    // }
-    // int foo_2(enum_var b){
-    //     cout<<"I am A_foo_2_enum"<<endl;
-    //     return 0;  
-    // }
-
-    int foo_3(long a){
-        cout<<"I am A_foo_3_long"<<endl;
+    int foo_2(C_overload a){
+        cout<<"I am A_foo_2_B_overload"<<endl;
         return 0;  
     }
-    int foo_3(int *a){
+    int foo_2(string b){
+        cout<<"I am A_foo_2_string"<<endl;
+        return 0;  
+    }
+
+    int foo_3(string a){
+        cout<<"I am A_foo_3_string"<<endl;
+        return 0;  
+    }
+    int foo_3(int *b){
         cout<<"I am A_foo_3_pointer"<<endl;
         return 0;  
     }
@@ -117,23 +117,23 @@ int uutFuncoverload(string a, char b) {
     //   A::fun2(); // Allowed
 }
 
-// int uutFuncoverload(C_overload a, enum_var b) {
-//     A_overload objA;
-//     if (objA.foo_2(a) == 1) {
-//         cout << 1 << endl;
-//     } else {
-//         cout << -1 << endl;
-//     }
+int uutFuncoverload(C_overload a, string b) {
+    A_overload objA;
+    if (objA.foo_2(a) == 1) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
 
-//     if (objA.foo_2(b) == 2) {
-//         cout << 2 << endl;
-//     } else {
-//         cout << -2 << endl;
-//     }
-//     return 0;
+    if (objA.foo_2(b) == 2) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
 // }
 
-int uutFuncoverload(long a, int *b) {
+int uutFuncoverload(string a, int *b) {
     A_overload objA;
     if (objA.foo_3(a) == 1) {
         cout << 1 << endl;
