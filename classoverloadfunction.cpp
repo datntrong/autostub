@@ -131,7 +131,7 @@ int uutFuncoverload(C_overload a, string b) {
         cout << -2 << endl;
     }
     return 0;
-// }
+}
 
 int uutFuncoverload(string a, int *b) {
     A_overload objA;
@@ -147,10 +147,6 @@ int uutFuncoverload(string a, int *b) {
         cout << -2 << endl;
     }
     return 0;
-    //   obj.fun1(); // Allowed
-    //   obj.fun2(); // Allowed
-    //   A::fun1(); // Error!
-    //   A::fun2(); // Allowed
 }
 
 int multipleReferenceoverload(int a, double b) {
