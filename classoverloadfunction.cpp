@@ -1,9 +1,18 @@
 #include<iostream>
 using namespace std;
 
-enum enum_var {
-    one, two, three
+// enum enum_var {
+//     one, two, three
+// };
+
+class C_overload {
+    public:
+        int i;
+        C_overload(){
+        this -> i = 2;
+    }
 };
+
 class A_overload{
 public:
     int i;
@@ -29,21 +38,21 @@ public:
         return 0;    
     }
 
-    int foo_2(B_overload a){
+    int foo_2(C_overload a){
         cout<<"I am A_foo_2_B_overload"<<endl;
         return 0;  
     }
-    int foo_2(enum_var b){
-        cout<<"I am A_foo_2_list"<<endl;
+    int foo_2(string b){
+        cout<<"I am A_foo_2_string"<<endl;
         return 0;  
     }
 
-    int foo_3(int *a){
-        cout<<"I am A_foo_3_pointer"<<endl;
+    int foo_3(string a){
+        cout<<"I am A_foo_3_string"<<endl;
         return 0;  
     }
-    int foo_3(int arr[]){
-        cout<<"I am A_foo_3_array"<<endl;
+    int foo_3(int *b){
+        cout<<"I am A_foo_3_pointer"<<endl;
         return 0;  
     }
 };
@@ -63,7 +72,6 @@ class B_overload {
             cout<<"I am B_foo-double"<<endl;
             return 0;
         }
-
         A_overload retA(){
             return this->objA;
         }
@@ -109,7 +117,7 @@ int uutFuncoverload(string a, char b) {
     //   A::fun2(); // Allowed
 }
 
-int uutFuncoverload(B_overload a, list b) {
+int uutFuncoverload(C_overload a, string b) {
     A_overload objA;
     if (objA.foo_2(a) == 1) {
         cout << 1 << endl;
@@ -123,13 +131,9 @@ int uutFuncoverload(B_overload a, list b) {
         cout << -2 << endl;
     }
     return 0;
-    //   obj.fun1(); // Allowed
-    //   obj.fun2(); // Allowed
-    //   A::fun1(); // Error!
-    //   A::fun2(); // Allowed
 }
 
-int uutFuncoverload(int *a, int b[]) {
+int uutFuncoverload(string a, int *b) {
     A_overload objA;
     if (objA.foo_3(a) == 1) {
         cout << 1 << endl;
@@ -143,10 +147,6 @@ int uutFuncoverload(int *a, int b[]) {
         cout << -2 << endl;
     }
     return 0;
-    //   obj.fun1(); // Allowed
-    //   obj.fun2(); // Allowed
-    //   A::fun1(); // Error!
-    //   A::fun2(); // Allowed
 }
 
 int multipleReferenceoverload(int a, double b) {
