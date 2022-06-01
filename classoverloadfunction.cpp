@@ -108,7 +108,7 @@ int uutFuncoverload(int a, double b) {
 }
 
 int uutFuncoverload(float a[], float b[]) {
-    A_overload objB;
+    B_overload objB;
     if (objB.average(a) == 1) {
         cout << 1 << endl;
     } else {
