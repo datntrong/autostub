@@ -127,7 +127,7 @@ int uutFuncoverload(float a[], float b[]) {
     //   A::fun2(); // Allowed
 }
 
-int uutFuncoverload(fload a, char b) {
+int uutFuncoverload(float a, char b) {
     A_overload objA;
     if (objA.foo_1(a) == 1) {
         cout << 1 << endl;
