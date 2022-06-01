@@ -75,17 +75,27 @@ class B_overload {
         A_overload retA(){
             return this->objA;
         }
+        float average(float age[]) {
+            
+            int i;
+            float avg, sum = 0.0;
+            for (i = 0; i < 6; ++i) {
+                sum += age[i];
+            }
+            avg = (sum / 6);
+            return avg;
+        }
 };
 
 int uutFuncoverload(int a, double b) {
-    A_overload objA;
-    if (objA.foo(a) == 1) {
+    B_overload objB;
+    if (objB.foo(a) == 1) {
         cout << 1 << endl;
     } else {
         cout << -1 << endl;
     }
 
-    if (objA.foo(b) == 2) {
+    if (objB.foo(b) == 2) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
@@ -97,7 +107,27 @@ int uutFuncoverload(int a, double b) {
     //   A::fun2(); // Allowed
 }
 
-int uutFuncoverload(string a, char b) {
+int uutFuncoverload(float a[], float b[]) {
+    A_overload objA;
+    if (objA.average(a) == 1) {
+        cout << 1 << endl;
+    } else {
+        cout << -1 << endl;
+    }
+
+    if (objA.average(b) == 2) {
+        cout << 2 << endl;
+    } else {
+        cout << -2 << endl;
+    }
+    return 0;
+    //   obj.fun1(); // Allowed
+    //   obj.fun2(); // Allowed
+    //   A::fun1(); // Error!
+    //   A::fun2(); // Allowed
+}
+
+int uutFuncoverload(fload a, char b) {
     A_overload objA;
     if (objA.foo_1(a) == 1) {
         cout << 1 << endl;
