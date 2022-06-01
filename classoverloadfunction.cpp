@@ -55,6 +55,16 @@ public:
         cout<<"I am A_foo_3_pointer"<<endl;
         return 0;  
     }
+    float average(float age[]) {
+            
+            int i;
+            float avg, sum = 0.0;
+            for (i = 0; i < 6; ++i) {
+                sum += age[i];
+            }
+            avg = (sum / 6);
+            return avg;
+        }
 };
 
 class B_overload {
@@ -75,47 +85,18 @@ class B_overload {
         A_overload retA(){
             return this->objA;
         }
-        float average(float age[]) {
-            
-            int i;
-            float avg, sum = 0.0;
-            for (i = 0; i < 6; ++i) {
-                sum += age[i];
-            }
-            avg = (sum / 6);
-            return avg;
-        }
+        
 };
 
-int uutFuncoverload(int a, double b) {
-    B_overload objB;
-    if (objB.foo(a) == 1) {
-        cout << 1 << endl;
-    } else {
-        cout << -1 << endl;
-    }
-
-    if (objB.foo(b) == 2) {
-        cout << 2 << endl;
-    } else {
-        cout << -2 << endl;
-    }
-    return 0;
-    //   obj.fun1(); // Allowed
-    //   obj.fun2(); // Allowed
-    //   A::fun1(); // Error!
-    //   A::fun2(); // Allowed
-}
-
 int uutFuncoverload(float a[], float b[]) {
-    B_overload objB;
-    if (objB.average(a) == 1) {
+    A_overload objA;
+    if (objA.average(a) == 1) {
         cout << 1 << endl;
     } else {
         cout << -1 << endl;
     }
 
-    if (objB.average(b) == 2) {
+    if (objA.average(b) == 2) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
