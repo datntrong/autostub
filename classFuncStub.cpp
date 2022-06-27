@@ -9,8 +9,8 @@ class A {
     typedef int_fast16_t   sc_short;
     typedef uint_fast16_t  sc_ushort;
     typedef int32_t        sc_integer;
-    typedef int16_t		   sc_errorCode;
-    typedef double         sc_real;
+    typedef int16_t		   sc_int16;
+    typedef double         sc_real_double;
     typedef bool           sc_boolean;
 
     typedef intptr_t       sc_eventid;
@@ -35,9 +35,14 @@ class A {
         sc_boolean ret_sc_boolean(int a){
             return 1;
         }
+        sc_real_double ret_sc_real_double(int a){
+            return 1.01
+        }
+        sc_int16 ret_sc_int16(int a){
+            return 10;
+        }
         
 };
- typedef bool           sc_boolean_sosanh;
 class B {
     static int a;
     int b;
