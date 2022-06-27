@@ -117,7 +117,7 @@ int uutFunc(int a, int b) {
         cout << -2 << endl;
     }
 
-    if(objA.ret_sc_boolean==sc_boolean_sosanh){
+    if(objA.ret_sc_boolean){
         cout<<'123456';
     }
     else {
