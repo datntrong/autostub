@@ -4,6 +4,17 @@ using namespace std;
 
 class A {
     int b;
+
+
+    typedef int_fast16_t   sc_short;
+    typedef uint_fast16_t  sc_ushort;
+    typedef int32_t        sc_integer;
+    typedef int16_t		   sc_errorCode;
+    typedef double         sc_real;
+    typedef bool           sc_boolean;
+
+    typedef intptr_t       sc_eventid;
+
     public:
         int a;
         A(){
@@ -21,8 +32,12 @@ class A {
         int ret6() {
             return 6;
         }
+        sc_boolean ret_sc_boolean(int a){
+            return sc_boolean;
+        }
+        
 };
-
+ typedef bool           sc_boolean_sosanh;
 class B {
     static int a;
     int b;
@@ -126,6 +141,13 @@ int multipleReference(int a, int b) {
         cout << 2 << endl;
     } else {
         cout << -2 << endl;
+    }
+
+    if(objA.ret_sc_boolean==sc_boolean_sosanh){
+        cout<<'123456';
+    }
+    else {
+        cout<<"112233";
     }
     return 0;
     //   obj.fun1(); // Allowed
