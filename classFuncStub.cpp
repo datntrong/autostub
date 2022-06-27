@@ -116,6 +116,13 @@ int uutFunc(int a, int b) {
     } else {
         cout << -2 << endl;
     }
+
+    if(objA.ret_sc_boolean==sc_boolean_sosanh){
+        cout<<'123456';
+    }
+    else {
+        cout<<"112233";
+    }
     return 0;
     //   obj.fun1(); // Allowed
     //   obj.fun2(); // Allowed
@@ -143,12 +150,7 @@ int multipleReference(int a, int b) {
         cout << -2 << endl;
     }
 
-    if(objA.ret_sc_boolean==sc_boolean_sosanh){
-        cout<<'123456';
-    }
-    else {
-        cout<<"112233";
-    }
+    
     return 0;
     //   obj.fun1(); // Allowed
     //   obj.fun2(); // Allowed
