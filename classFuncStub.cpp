@@ -33,7 +33,7 @@ class A {
             return 6;
         }
         sc_boolean ret_sc_boolean(int a){
-            return sc_boolean;
+            return 1;
         }
         
 };
@@ -117,7 +117,7 @@ int uutFunc(int a, int b) {
         cout << -2 << endl;
     }
 
-    if(objA.ret_sc_boolean){
+    if(objA.ret_sc_boolean(a)){
         cout<<'123456';
     }
     else {
