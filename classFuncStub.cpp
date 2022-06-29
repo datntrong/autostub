@@ -133,6 +133,31 @@ int uutFunc(int a, int b) {
     else {
         cout<<"112233";
     }
+
+    if(objA.ret_sc_real_double(a)==1.01){
+        cout<<'realdouble123456';
+    }
+    else {
+        cout<<"realdouble112233";
+    }
+
+
+    if(objA.ret_sc_int16(a)==10){
+        cout<<'retscint16_123456';
+    }
+    else {
+        cout<<"retscint16_112233";
+    }
+
+
+    if(objA.ret_sc_integer(a)==10){
+        cout<<'retscinteger_123456';
+    }
+    else {
+        cout<<"retscinteger_112233";
+    }
+
+    
     return 0;
     //   obj.fun1(); // Allowed
     //   obj.fun2(); // Allowed
