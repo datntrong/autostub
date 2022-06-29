@@ -46,7 +46,12 @@ class A {
         sc_integer ret_sc_integer(int a){
             return 10;
         }
-        
+        sc_ushort ret_sc_uintfast16(int a){
+            return 10;
+        }
+        sc_short ret_sc_intfast16(int a){
+            return 10;
+        }
 };
 class B {
     static int a;
@@ -155,6 +160,20 @@ int uutFunc(int a, int b) {
     }
     else {
         cout<<"retscinteger_112233";
+    }
+
+    if(objA.ret_sc_uintfast16(a)==10){
+        cout<<'uninfast_123456';
+    }
+    else {
+        cout<<"uninfast_112233";
+    }
+
+    if(objA.ret_sc_intfast16(a)==10){
+        cout<<'ninfast_123456';
+    }
+    else {
+        cout<<"ninfast_112233";
     }
 
     
