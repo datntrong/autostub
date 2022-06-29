@@ -41,6 +41,9 @@ class A {
         sc_int16 ret_sc_int16(int a){
             return 10;
         }
+        sc_integer ret_sc_integer(int a){
+            return 10;
+        }
         
 };
 class B {
