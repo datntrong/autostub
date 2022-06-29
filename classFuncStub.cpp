@@ -2,18 +2,20 @@
 
 using namespace std;
 
+
+typedef int_fast16_t   sc_short;
+typedef uint_fast16_t  sc_ushort;
+typedef int32_t        sc_integer;
+typedef int16_t		   sc_int16;
+typedef double         sc_real_double;
+typedef bool           sc_boolean;
+
+typedef intptr_t       sc_eventid;
 class A {
     int b;
 
 
-    typedef int_fast16_t   sc_short;
-    typedef uint_fast16_t  sc_ushort;
-    typedef int32_t        sc_integer;
-    typedef int16_t		   sc_int16;
-    typedef double         sc_real_double;
-    typedef bool           sc_boolean;
-
-    typedef intptr_t       sc_eventid;
+    
 
     public:
         int a;
