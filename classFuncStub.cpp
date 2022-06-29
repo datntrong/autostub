@@ -38,7 +38,7 @@ class A {
             return 1;
         }
         sc_real_double ret_sc_real_double(int a){
-            return 1.01
+            return 1.01;
         }
         sc_int16 ret_sc_int16(int a){
             return 10;
