@@ -46,6 +46,13 @@ int test(int a){
         cout<<"di vao dong if true";
 
     }
+    else if (tmp == 1){
+        cout<<"Toi la Student";
+
+    }
+    else if (tmp ==0 ){
+        cout<<"Toi la Person";
+    }
     else {
         cout<<"di vao dong if false";
     }
