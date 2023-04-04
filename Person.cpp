@@ -36,3 +36,17 @@ int main(){
     ps = &st1;
     ps->sayHello();
 }
+int test(int a){
+    Student st1;
+   // st1.sayHello();
+    Person *ps;
+    ps = &st1;
+    int tmp = ps->foo();
+    if (tmp == 20){
+        cout<<"di vao dong if true";
+
+    }
+    else {
+        cout<<"di vao dong if false";
+    }
+}
