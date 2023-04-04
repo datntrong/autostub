@@ -24,7 +24,7 @@ SOURCES += \
         classprivateStub.cpp \
         fooStubstatic.cpp \
         classvirtualfunc.cpp \
-        person.cpp\
+        person.cpp \
         
 
 
