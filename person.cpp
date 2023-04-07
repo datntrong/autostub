@@ -7,7 +7,7 @@ public:
     void sayHello(){
         cout << "Hello Person";
     }
-    int foo(){
+    virtual int foo(){
         return 0;
     }
 
@@ -30,17 +30,14 @@ class Student : public Person {
 
 int main(){
 	
-    Student st1;
-   // st1.sayHello();
-    Person *ps;
-    ps = &st1;
+    Person *ps = new Student()
+   
     ps->sayHello();
 }
 int test(int a){
-    Student st1;
+    
    // st1.sayHello();
-    Person *ps;
-    ps = &st1;
+    Person *ps = new Student()
     int tmp = ps->foo();
     if (tmp == 20){
         cout<<"di vao dong if true";
