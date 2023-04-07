@@ -30,14 +30,14 @@ class Student : public Person {
 
 int main(){
 	
-    Person *ps = new Student()
+    Person *ps = new Student();
    
     ps->sayHello();
 }
 int test(int a){
     
    // st1.sayHello();
-    Person *ps = new Student()
+    Person *ps = new Student();
     int tmp = ps->foo();
     if (tmp == 20){
         cout<<"di vao dong if true";
