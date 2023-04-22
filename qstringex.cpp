@@ -2,7 +2,7 @@
 
 #define STR_EQUAL 0
 
-int main(void) {
+int test_qtstring(void) {
 
    QTextStream out(stdout);
 
