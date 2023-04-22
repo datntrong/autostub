@@ -25,6 +25,7 @@ SOURCES += \
         fooStubstatic.cpp \
         classvirtualfunc.cpp \
         person.cpp \
+        qstringex.cpp \
         
 
 
