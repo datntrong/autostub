@@ -26,6 +26,8 @@ SOURCES += \
         classvirtualfunc.cpp \
         person.cpp \
         qstringex.cpp \
+        avg.cpp \
+        
         
 
 
