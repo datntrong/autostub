@@ -1,6 +1,6 @@
 #include <QStringList>
 #include <QString>
-QStringList listQt_String(QString a, QSting b){
+QStringList listQt_String(QString a, QString b){
     QStringList mOldList;
     mOldList.append("1");
     mOldList.append("2");
