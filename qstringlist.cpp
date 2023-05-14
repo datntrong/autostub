@@ -1,5 +1,5 @@
 #include <QStringList>
-#include <Qstring>
+#include <QString>
 QStringList listQt_String(QString a, QSting b){
     QStringList mOldList;
     mOldList.append("1");
