@@ -12,9 +12,9 @@ int main_test_qstringlist(){
     mNewList.append("1");
     mNewList.append("2");
     mNewList.append("15");
-    Qstring a = "a", b = "b";
-    mOldList = listQt_String(a, b)
-    qSort(mNewList); qSort(mOldList);
+    QString a = "a", b = "b";
+    QStringList mOldList = listQt_String(a, b);
+    // qSort(mNewList); qSort(mOldList);
     if(mNewList == mOldList){
         qDebug() << "same";
     }
