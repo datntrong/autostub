@@ -18,5 +18,7 @@ int main_test_qstringlist(){
     if(mNewList == mOldList){
         qDebug() << "same";
     }
-    else qDebug() << "not same";
+    else {
+        qDebug() << "not same";
+    }
 }
