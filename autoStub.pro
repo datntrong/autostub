@@ -27,6 +27,8 @@ SOURCES += \
         person.cpp \
         qstringex.cpp \
         avg.cpp \
+        qstringlist.cpp \
+        
         
         
 
