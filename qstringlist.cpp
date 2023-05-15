@@ -1,6 +1,6 @@
 #include <QStringList>
 #include <QString>
-#include <iostrem>
+#include <iostream>
 using namespace std;
 QStringList listQt_String(QString a, QString b){
     QStringList mOldList;
