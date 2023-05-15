@@ -1,5 +1,7 @@
 #include <QStringList>
 #include <QString>
+#include <iostrem>
+using namespace std;
 QStringList listQt_String(QString a, QString b){
     QStringList mOldList;
     mOldList.append("1");
@@ -16,9 +18,9 @@ int main_test_qstringlist(){
     QStringList mOldList = listQt_String(a, b);
     // qSort(mNewList); qSort(mOldList);
     if(mNewList == mOldList){
-        qDebug() << "same";
+        cout << "same";
     }
     else {
-        qDebug() << "not same";
+        cout << "not same";
     }
 }
